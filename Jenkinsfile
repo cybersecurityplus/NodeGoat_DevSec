@@ -19,7 +19,7 @@ pipeline {
             stage('Docker UP') {
             steps {
                 script{
-                    sh 'docker-compose up -d web-staging mongo-staging'
+                    sh 'sudo docker-compose up -d web-staging mongo-staging'
                 }
         }
             }
