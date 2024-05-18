@@ -12,6 +12,13 @@ pipeline {
             steps {
                 git 'https://github.com/cybersecurityplus/NodeGoat_DevSec'
             }
+
+            stage('Docker UP') {
+            steps {
+                script{
+                    sh 'docker-compose up -d web-staging mongo-staging'
+                }
+            }
         }
    
     }
